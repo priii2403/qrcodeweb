@@ -46,7 +46,7 @@ const HomePage = () => {
        <div className="loader"></div>
      </div>
       )}
-      <div className='background-image'></div>
+      <div className='background-image'  onLoad={handleImageLoad}></div>
 
       <div className={`content-container ${backgroundLoaded ? 'loaded' : ''}`}>
         <div className='content'>

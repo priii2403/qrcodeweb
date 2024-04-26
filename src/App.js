@@ -40,19 +40,19 @@ const HomePage = () => {
       <div className='cUS'>Contact Us</div>
       <div className="social-icons">
       <div>
-      <a href="#" onClick={navigateToFacebook}>
+      <a href="/" onClick={navigateToFacebook}>
         <FontAwesomeIcon icon={faFacebook} />
       </a>
-      <a href="#" onClick={navigateToInstagram}>
+      <a href="/" onClick={navigateToInstagram}>
         <FontAwesomeIcon icon={faInstagram} />
       </a>
-      <a href="#" onClick={navigateToLinkedIn}>
+      <a href="/" onClick={navigateToLinkedIn}>
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
-      <a href="#" onClick={navigateToWhatsApp}>
+      <a href="/" onClick={navigateToWhatsApp}>
         <FontAwesomeIcon icon={faWhatsapp} />
       </a>
-      <a href="#" onClick={sendEmail}>
+      <a href="/" onClick={sendEmail}>
         <FontAwesomeIcon icon={faEnvelope} />
       </a>
     </div>

@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import TypingEffect from './TypingEffect'; // Import TypingEffect component
-import './App.css'; // Import your CSS file for styling
-
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import TypingEffect from "./TypingEffect"; // Import TypingEffect component
+import "./App.css"; // Import your CSS file for styling
 
 const HomePage = () => {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
 
   const navigateToFacebook = () => {
-    // Replace 'https://www.facebook.com/' with your Facebook page URL
-    window.location.href = 'https://www.facebook.com/profile.php?id=61558386894174';
+    window.location.href =
+      "https://www.facebook.com/profile.php?id=61558386894174";
   };
 
   const navigateToInstagram = () => {
-    // Replace 'https://www.instagram.com/' with your Instagram page URL
-    window.location.href = 'https://www.instagram.com/nutan_exports/';
+    window.location.href = "https://www.instagram.com/nutan_exports/";
   };
 
   const navigateToLinkedIn = () => {
-    // Replace 'https://www.linkedin.com/' with your LinkedIn page URL
-    window.location.href = 'https://www.linkedin.com/';
+    window.location.href =
+      "https://www.linkedin.com/company/102413267/admin/feed/posts/";
   };
 
   const navigateToWhatsApp = () => {
@@ -31,8 +35,10 @@ const HomePage = () => {
   };
 
   const sendEmail = () => {
-    // Replace 'mailto:your.email@example.com' with your email address
-    window.location.href = 'mailto:nutanexports01@gmail.com';
+    window.location.href = "mailto:nutanexports01@gmail.com";
+  };
+  const navigateToTwitter = () => {
+    window.location.href = "https://twitter.com/home";
   };
 
   const handleImageLoad = () => {
@@ -40,34 +46,37 @@ const HomePage = () => {
   };
 
   return (
-    <div className='homepage'>
+    <div className="homepage">
       {!backgroundLoaded && (
-       <div className="loader-container">
-       <div className="loader"></div>
-     </div>
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
       )}
-      <div className='background-image'  onLoad={handleImageLoad}></div>
+      <div className="background-image" onLoad={handleImageLoad}></div>
 
-      <div className={`content-container ${backgroundLoaded ? 'loaded' : ''}`}>
-        <div className='content'>
+      <div className={`content-container ${backgroundLoaded ? "loaded" : ""}`}>
+        <div className="content">
           <TypingEffect text="NUTAN EXPORTS" />
         </div>
-        <div className='cUS'>Contact Us</div>
+        <div className="cUS">Contact Us</div>
         <div className="social-icons">
           <div>
-            <a href="/" onClick={navigateToFacebook}>
+            <a onClick={navigateToFacebook}>
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="/" onClick={navigateToInstagram}>
+            <a onClick={navigateToInstagram}>
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="/" onClick={navigateToLinkedIn}>
+            <a onClick={navigateToLinkedIn}>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="/" onClick={navigateToWhatsApp}>
+            <a onClick={navigateToWhatsApp}>
               <FontAwesomeIcon icon={faWhatsapp} />
             </a>
-            <a href="/" onClick={sendEmail}>
+            <a onClick={navigateToTwitter}>
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a onClick={sendEmail}>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </div>

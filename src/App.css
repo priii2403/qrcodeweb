@@ -32,13 +32,15 @@
   color: white;
   font-family: "Futura", sans-serif;
   font-size: 6rem;
-  margin-bottom: 20px;
+  /* margin-bottom: 30px; */
+  margin-top: -50px;
 }
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
   .content {
-    font-size: 3rem; /* Decrease font size for mobile view */
+    font-size: 3rem;
+    margin-top: -10px;
   }
 }
 .social-icons {
@@ -47,6 +49,7 @@
   justify-content: space-around; /* Distribute space evenly between icons */
   align-items: center;
   color: '#AC9453';
+  margin-top: -5px;
 }
 .social-icons svg {
   font-size: 2.5rem;
@@ -70,5 +73,11 @@
   font-family: "Futura", sans-serif;
   font-size: 1.3rem;
   margin-bottom: 20px;
-
+  margin-top: -80px;
+}
+@media screen and (max-width: 768px) {
+  .cUS {
+    /* font-size: 3rem; */
+    margin-top: -20px;
+  }
 }

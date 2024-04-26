@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './App.css'; // Import your CSS file for styling
+import TypingEffect from './TypingEffect';
 
 const HomePage = () => {
   const navigateToFacebook = () => {
@@ -34,9 +35,9 @@ const HomePage = () => {
     <div className='homepage'>
     <div className='background-image'></div>
     <div className='content-container'>
-      <div className='content'>
-        NUTAN EXPORTS
-      </div>
+    <div className='content'>
+    <TypingEffect text="NUTAN EXPORTS" />
+        </div>
       <div className='cUS'>Contact Us</div>
       <div className="social-icons">
       <div>

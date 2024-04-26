@@ -61,7 +61,7 @@ const HomePage = () => {
         <div className="cUS">Contact Us</div>
         <div className="social-icons">
           <div>
-            <a onClick={navigateToFacebook}>
+            <a href="javascript:"onClick={navigateToFacebook}>
               <FontAwesomeIcon icon={faFacebook} />
             </a>
             <a onClick={navigateToInstagram}>

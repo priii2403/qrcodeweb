@@ -61,22 +61,22 @@ const HomePage = () => {
         <div className="cUS">Contact Us</div>
         <div className="social-icons">
           <div>
-            <a href="javascript:"onClick={navigateToFacebook}>
+            <a  href={() => false}onClick={navigateToFacebook}>
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a onClick={navigateToInstagram}>
+            <a h href={() => false}onClick={navigateToInstagram}>
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a onClick={navigateToLinkedIn}>
+            <a  href={() => false}onClick={navigateToLinkedIn}>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a onClick={navigateToWhatsApp}>
+            <a  href={() => false}onClick={navigateToWhatsApp}>
               <FontAwesomeIcon icon={faWhatsapp} />
             </a>
-            <a onClick={navigateToTwitter}>
+            <a  href={() => false}onClick={navigateToTwitter}>
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a onClick={sendEmail}>
+            <a  href={() => false}onClick={sendEmail}>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </div>

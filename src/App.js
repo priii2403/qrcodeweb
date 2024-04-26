@@ -7,12 +7,12 @@ import './App.css'; // Import your CSS file for styling
 const HomePage = () => {
   const navigateToFacebook = () => {
     // Replace 'https://www.facebook.com/' with your Facebook page URL
-    window.location.href = 'https://www.facebook.com/';
+    window.location.href = 'https://www.facebook.com/profile.php?id=61558386894174';
   };
 
   const navigateToInstagram = () => {
     // Replace 'https://www.instagram.com/' with your Instagram page URL
-    window.location.href = 'https://www.instagram.com/';
+    window.location.href = 'https://www.instagram.com/nutan_exports/';
   };
 
   const navigateToLinkedIn = () => {
@@ -21,13 +21,14 @@ const HomePage = () => {
   };
 
   const navigateToWhatsApp = () => {
-    // Replace 'https://web.whatsapp.com/' with your WhatsApp page URL
-    window.location.href = 'https://web.whatsapp.com/';
+    const phoneNumber = "919016708332";
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    window.location.href = whatsappUrl;
   };
 
   const sendEmail = () => {
     // Replace 'mailto:your.email@example.com' with your email address
-    window.location.href = 'mailto:your.email@example.com';
+    window.location.href = 'mailto:nutanexports01@gmail.com';
   };
   return (
     <div className='homepage'>

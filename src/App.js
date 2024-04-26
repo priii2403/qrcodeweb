@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import TypingEffect from './TypingEffect'; // Import TypingEffect component
 import './App.css'; // Import your CSS file for styling
-import TypingEffect from './TypingEffect';
+
 
 const HomePage = () => {
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+
   const navigateToFacebook = () => {
     // Replace 'https://www.facebook.com/' with your Facebook page URL
     window.location.href = 'https://www.facebook.com/profile.php?id=61558386894174';
@@ -23,7 +26,7 @@ const HomePage = () => {
 
   const navigateToWhatsApp = () => {
     const phoneNumber = "919016708332";
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
     window.location.href = whatsappUrl;
   };
 
@@ -31,35 +34,52 @@ const HomePage = () => {
     // Replace 'mailto:your.email@example.com' with your email address
     window.location.href = 'mailto:nutanexports01@gmail.com';
   };
+
+  const handleImageLoad = () => {
+    setBackgroundLoaded(true);
+  };
+
   return (
     <div className='homepage'>
-    <div className='background-image'></div>
-    <div className='content-container'>
-    <div className='content'>
-    <TypingEffect text="NUTAN EXPORTS" />
+      {!backgroundLoaded && (
+       <div className="loader-container">
+       <div className="loader"></div>
+     </div>
+      )}
+      <div className={`background-image ${backgroundLoaded ? 'loaded' : ''}`}>
+        {/* Your background image element */}
+        <img
+          src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg'
+          alt='Background'
+          onLoad={handleImageLoad}
+        />
+      </div>
+      <div className={`content-container ${backgroundLoaded ? 'loaded' : ''}`}>
+        <div className='content'>
+          <TypingEffect text="NUTAN EXPORTS" />
         </div>
-      <div className='cUS'>Contact Us</div>
-      <div className="social-icons">
-      <div>
-      <a href="/" onClick={navigateToFacebook}>
-        <FontAwesomeIcon icon={faFacebook} />
-      </a>
-      <a href="/" onClick={navigateToInstagram}>
-        <FontAwesomeIcon icon={faInstagram} />
-      </a>
-      <a href="/" onClick={navigateToLinkedIn}>
-        <FontAwesomeIcon icon={faLinkedin} />
-      </a>
-      <a href="/" onClick={navigateToWhatsApp}>
-        <FontAwesomeIcon icon={faWhatsapp} />
-      </a>
-      <a href="/" onClick={sendEmail}>
-        <FontAwesomeIcon icon={faEnvelope} />
-      </a>
-    </div>
+        <div className='cUS'>Contact Us</div>
+        <div className="social-icons">
+          <div>
+            <a href="/" onClick={navigateToFacebook}>
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="/" onClick={navigateToInstagram}>
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="/" onClick={navigateToLinkedIn}>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a href="/" onClick={navigateToWhatsApp}>
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </a>
+            <a href="/" onClick={sendEmail}>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

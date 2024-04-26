@@ -46,14 +46,8 @@ const HomePage = () => {
        <div className="loader"></div>
      </div>
       )}
-      <div className={`background-image ${backgroundLoaded ? 'loaded' : ''}`}>
-        {/* Your background image element */}
-        <img
-          src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg'
-          alt='Background'
-          onLoad={handleImageLoad}
-        />
-      </div>
+      <div className='background-image'></div>
+
       <div className={`content-container ${backgroundLoaded ? 'loaded' : ''}`}>
         <div className='content'>
           <TypingEffect text="NUTAN EXPORTS" />

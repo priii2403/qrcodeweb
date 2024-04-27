@@ -7,7 +7,7 @@ import {
   faTwitter,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faGlobe } from "@fortawesome/free-solid-svg-icons"; // Import faGlobe icon
 import TypingEffect from "./TypingEffect"; // Import TypingEffect component
 import "./App.css"; // Import your CSS file for styling
 
@@ -34,11 +34,16 @@ const HomePage = () => {
     window.location.href = whatsappUrl;
   };
 
+  const navigateToTwitter = () => {
+    window.location.href = "https://twitter.com/home";
+  };
+
   const sendEmail = () => {
     window.location.href = "mailto:nutanexports01@gmail.com";
   };
-  const navigateToTwitter = () => {
-    window.location.href = "https://twitter.com/home";
+
+  const navigateToWebsite = () => {
+    window.location.href = "https://nutenexports.netlify.app"; // Change the URL to your website URL
   };
 
   const handleImageLoad = () => {
@@ -61,23 +66,26 @@ const HomePage = () => {
         <div className="cUS">Contact Us</div>
         <div className="social-icons">
           <div>
-            <a  href={() => false}onClick={navigateToFacebook}>
+            <a href={() => false} onClick={navigateToFacebook}>
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a h href={() => false}onClick={navigateToInstagram}>
+            <a href={() => false} onClick={navigateToInstagram}>
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a  href={() => false}onClick={navigateToLinkedIn}>
+            <a href={() => false} onClick={navigateToLinkedIn}>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a  href={() => false}onClick={navigateToWhatsApp}>
+            <a href={() => false} onClick={navigateToWhatsApp}>
               <FontAwesomeIcon icon={faWhatsapp} />
             </a>
-            <a  href={() => false}onClick={navigateToTwitter}>
+            <a href={() => false} onClick={navigateToTwitter}>
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a  href={() => false}onClick={sendEmail}>
+            <a href={() => false} onClick={sendEmail}>
               <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+            <a href={() => false} onClick={navigateToWebsite}>
+              <FontAwesomeIcon icon={faGlobe} />
             </a>
           </div>
         </div>
